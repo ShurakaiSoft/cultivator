@@ -1,3 +1,6 @@
+# Project management files
+.idea
+
 # Logs
 logs
 *.log

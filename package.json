@@ -1,0 +1,40 @@
+{
+  "name": "cultivator",
+  "version": "1.0.0",
+  "description": "Manage upgrade/downgrades of infrastructure changes node.js applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "MIGRATIONS_CONFIG='/test/config.js' mocha test/"
+  },
+  "bin": {
+    "cultivator": "bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShurakaiSoft/cultivator.git"
+  },
+  "keywords": [
+    "upgrade",
+    "downgrade",
+    "automatic",
+    "rollback",
+    "mongodb",
+    "node.js"
+  ],
+  "author": "Stephen Parker <shurakaisoft@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShurakaiSoft/cultivator/issues"
+  },
+  "homepage": "https://github.com/ShurakaiSoft/cultivator#readme",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "cli": "^1.0.1",
+    "require-dir": "^0.3.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "mongoose": "^4.7.7"
+  }
+}
