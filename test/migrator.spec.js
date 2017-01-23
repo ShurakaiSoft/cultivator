@@ -53,7 +53,7 @@ describe('The migrator module:', function () {
 
         describe('WHEN direction is migrate', function () {
             it('should run the given migrations `migrate` script', function () {
-                return migrator.run('0.1.0', 'migrate')
+                return migrator.run({ migrationsDir: config.migrationsDir, version: '0.1.0', action: 'migrate' })
                     .then(() => {
                         return Customer.find({}).lean()
                     })
@@ -67,7 +67,7 @@ describe('The migrator module:', function () {
             it('should run the given migrations `rollback` script', function () {
                 return Customer.create({ name: 'Hugh Jackman', netWorth: '100M', age: 48, nationality: 'Australian' })
                     .then(() => {
-                        return migrator.run('0.1.0', 'rollback')
+                        return migrator.run({ migrationsDir: config.migrationsDir, version: '0.1.0', action: 'rollback' })
                     })
                     .then(() => {
                         return Customer.find({}).lean()

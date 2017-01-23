@@ -4,7 +4,7 @@
   "description": "Manage upgrade/downgrades of infrastructure changes node.js applications.",
   "main": "index.js",
   "scripts": {
-    "test": "MIGRATIONS_CONFIG='/test/config.js' mocha test/"
+    "test": "mocha test/"
   },
   "bin": {
     "cultivator": "bin/index.js"
@@ -30,6 +30,7 @@
   "dependencies": {
     "bluebird": "^3.4.7",
     "cli": "^1.0.1",
+    "mkdirp": "^0.5.1",
     "require-dir": "^0.3.1"
   },
   "devDependencies": {
